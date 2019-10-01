@@ -1,0 +1,42 @@
+%header.header
+  .header_warrap
+    .left
+      .left_top
+        = link_to '/' do
+          = icon 'fa', 'home', class: "home"
+    .center
+      %ul.center_ul
+        %li.center_ul_li
+          = link_to 'About', '/',class: "link"
+        %li.center_ul_li
+          =link_to 'Profile', '/',class: "link"
+        %li.center_ul_li
+          = link_to 'MyWorks', '/',class: "link"
+        %li.center_ul_li
+          = link_to 'MailForm', '/',class: "link"
+    .right
+      .right_icon
+        = link_to 'https://twitter.com/HbFOFW7rtnIfyY6' do
+          = icon 'fab', 'twitter',class: "twitter"
+%main.contents
+  .contents_first#Top
+    .contents_first_warrap
+      .contents_first_warrap_mask
+        .boxs
+          .boxs_title
+            My Portfolio
+          .boxs_comment
+            %p
+              初学者から学習を行いRuby on Rails を利用しアプリケーションの開発を行なっています
+          .boxs_introduction
+            %ul.boxs_introduction_box
+              学習中の内容
+              %li Ruby on Rails
+              %li mysql
+              %li kotlin
+  .contents_second#Profile
+    second
+  .contents_third#MyWorks
+    third
+  .contents_forth#MailForm
+    forth

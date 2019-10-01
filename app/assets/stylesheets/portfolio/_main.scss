@@ -1,0 +1,62 @@
+.contents{
+  padding-top: 70px;
+  &_first{
+    height: calc(100vh - 70px);
+    width: 100%;
+    &_warrap{
+      height: 100%;
+      background: url(images/cafe1.jpeg);
+      background-size: cover;
+      &_mask{
+        position: relative;
+        height: 100%;
+        background-color: rgba(255,255,255,0.85);
+        .boxs{
+          height: 50%;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+          text-align: center;
+          &_title{
+            font-size: 44px;
+          }
+          &_comment{
+            margin-top: 25px;
+            font-size: 18px;
+          }
+          &_introduction{
+            width: 50%;
+            padding: 0.5em 1em;
+            margin: 2em auto;
+            color: #000000;
+            background: #EEFFFF;
+            border-bottom: solid 6px #6eb7ff;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+            border-radius: 9px;
+            &_box{
+              font-size: 26px;
+              li{
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &_second{
+    height: calc(100vh - 70px);
+    background-color: #FFFFaa;
+  }
+  &_third{
+    height: calc(100vh - 70px);
+    background-color: #FFaaEE;
+  }
+  &_forth{
+    height: calc(100vh - 70px);
+    background-color: #aaFFEE;
+  }
+}
