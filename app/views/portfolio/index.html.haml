@@ -7,13 +7,11 @@
     .center
       %ul.center_ul
         %li.center_ul_li
-          = link_to 'About', '/',class: "link"
-        %li.center_ul_li
           =link_to 'Profile', '/',class: "link"
         %li.center_ul_li
           = link_to 'MyWorks', '/',class: "link"
         %li.center_ul_li
-          = link_to 'MailForm', '/',class: "link"
+          = link_to 'Contact', '/',class: "link"
     .right
       .right_icon
         = link_to 'https://twitter.com/HbFOFW7rtnIfyY6' do
@@ -24,7 +22,7 @@
       .contents_first_warrap_mask
         .boxs
           .boxs_title
-            My Portfolio
+            Portfolio
           .boxs_comment
             %p
               初学者から学習を行いRuby on Rails を利用しアプリケーションの開発を行なっています
@@ -36,7 +34,39 @@
               %li kotlin
   .contents_second#Profile
     .contents_second_warrap
+      .box_warrap
+        .box
+          Works
+        %ul.items
+          %li.items_app
+            = link_to '/' do
+              .items_app_header
+                %figure.items_app_header_figure
+                  = image_tag("images/cafe3",size:'280x260')
+              .items_app_footer
+                @アプリケーション名
+          %li.items_app
+            = link_to '/' do
+              .items_app_header
+                %figure.items_app_header_figure
+                  = image_tag("images/cafe3",size:'280x260')
+              .items_app_footer
+                @アプリケーション名
+          %li.items_app
+            = link_to '/' do
+              .items_app_header
+                %figure.items_app_header_figure
+                  = image_tag("images/cafe3",size:'280x260')
+              .items_app_footer
+                @アプリケーション名
+          %li.items_app
+            = link_to '/' do
+              .items_app_header
+                %figure.items_app_header_figure
+                  = image_tag("images/cafe3",size:'280x260')
+              .items_app_footer
+                @アプリケーション名
+        .work_more
+          = link_to 'more', '/'
   .contents_third#MyWorks
     third
-  .contents_forth#MailForm
-    forth

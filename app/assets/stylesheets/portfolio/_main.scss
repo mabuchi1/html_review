@@ -55,6 +55,37 @@
     &_warrap{
       background-color: rgba(255,255,255,0.8);
       height: 100%;
+      .box_warrap{
+        height: 100%;
+        width: 100%;
+        padding-top: 90px;
+        font-size: 44px;
+        .box{
+          text-align: center;
+          padding-bottom: 80px;
+        }
+        .items{
+          font-size: 20px;
+          margin: 0 90px;
+          &_app{
+            border: #000000 solid 1px;
+            display: inline-block;
+            margin: 0 0 20px 30px;
+            &:first-child{
+              margin-left: 0;
+            }
+            &_footer{
+              text-align: center;
+              background-color: #FFFFFF;
+              padding-top: 10px;
+            }
+          }
+        }
+        .work_more{
+          text-align: right;
+          margin: 30px 90px 0 0;
+        }
+      }
     }
   }
   &_third{
