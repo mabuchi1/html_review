@@ -98,5 +98,9 @@ input, select {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.link{
+    color: #000000;
 }
