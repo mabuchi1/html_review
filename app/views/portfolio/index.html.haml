@@ -1,0 +1,56 @@
+= render 'shade/header'
+%main.contents
+  .contents_first#Top
+    .contents_first_warrap
+      .contents_first_warrap_mask
+        .boxs
+          .boxs_title
+            Portfolio
+          .boxs_comment
+            %p
+              初学者から学習を行いRuby on Rails を利用しアプリケーションの開発を行なっています
+          .boxs_introduction
+            %ul.boxs_introduction_box
+              学習中の内容
+              %li Ruby on Rails
+              %li mysql
+              %li kotlin
+          .boxs_about
+            = link_to 'about', '/' , class: "link"
+  .contents_second#Profile
+    .contents_second_warrap
+      .box_warrap
+        .box
+          %p
+            Works
+        %ul.items
+          %li.items_app
+            = link_to '/', class: "link" do
+              .items_app_header
+                %figure.items_app_header_figure
+                  = image_tag("images/cafe3",size:'280x260')
+              .items_app_footer
+                @アプリケーション名
+          %li.items_app
+            = link_to '/', class: "link" do
+              .items_app_header
+                %figure.items_app_header_figure
+                  = image_tag("images/cafe3",size:'280x260')
+              .items_app_footer
+                @アプリケーション名
+          %li.items_app
+            = link_to '/', class: "link" do
+              .items_app_header
+                %figure.items_app_header_figure
+                  = image_tag("images/cafe3",size:'280x260')
+              .items_app_footer
+                @アプリケーション名
+          %li.items_app
+            = link_to '/', class: "link" do
+              .items_app_header
+                %figure.items_app_header_figure
+                  = image_tag("images/cafe3",size:'280x260')
+              .items_app_footer
+                @アプリケーション名
+        .work_more
+          = link_to 'more', '/', class: "link"
