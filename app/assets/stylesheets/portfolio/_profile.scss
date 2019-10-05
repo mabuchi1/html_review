@@ -1,0 +1,64 @@
+.profile_warraper{
+  padding-top: 70px;
+  height: 100vh;
+  .profile_contents{
+    height: 100%;
+    width: 100%;
+    background: url(images/cafe1);
+    background-size: cover;
+    &_mask{
+      height: 100%;
+      background-color: rgba(255,255,255,0.85);
+      position: relative;
+      .profile{
+        height: 50%;
+        width: 75%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+        text-align: left;
+        &_header{
+          font-size: 30px;
+        }
+        &_body{
+          font-size: 18px;
+          margin-top: 15px;
+          &_boxs{
+            margin-top: 50px;
+            .box{
+              display: flex;
+              &_left{
+                margin-right: 100px;
+              }
+              &_right{
+                &_texts{
+                  &_add{
+                    line-height: 130%;
+                    width: 100%;
+                    padding-bottom: 15px;
+                    display: flex;
+                    &_title{
+                      width: 35%;
+                    }
+                    &_learning{
+                      width: 45%;
+                    }
+                    &_region{
+                      width: 35%;
+                    }
+                    &_twitter{
+                      width: 35%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
