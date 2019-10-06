@@ -11,3 +11,7 @@
         .blog_contents_box_bottom_text
           %span
             = @blog.text
+.my_edit
+  = link_to "編集する",  edit_blog_path(@blog.id)
+.my_delete
+  = link_to "削除する", "/blogs/#{@blog.id}", method: :delete
