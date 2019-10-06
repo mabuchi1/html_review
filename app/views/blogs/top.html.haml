@@ -1,0 +1,13 @@
+%header.blog_header#top
+  = render 'shade/header'
+%main.blog_warraper
+  .blog_warraper_box
+    .blog_warraper_box_left
+      Blog
+    .blog_warraper_box_right
+      = link_to '投稿ページ', new_blog_path, class: "link"
+      //後にadmin条件分岐
+  = render @blogs
+.footer
+  = link_to '#top' do
+    = icon "fa", "arrow-alt-circle-up",class: "arrow"
