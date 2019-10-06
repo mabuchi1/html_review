@@ -1,8 +1,9 @@
 .blog_contents
-  = link_to '/' do
+  = link_to blog_path(blog.id) do
     .blog_contents_box
       .blog_contents_box_top
-        = blog.title
+        %p
+          = blog.title
         %figure.blog_contents_box_top_figure
           = image_tag(blog.images[0], size: "75%x75%", class: "img")
           %figcaption.figcaption
@@ -10,5 +11,5 @@
               = blog.title
       .blog_contents_box_bottom
         .blog_contents_box_bottom_text
-          %span 
+          %span
             = blog.text
