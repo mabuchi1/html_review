@@ -1,20 +1,19 @@
-%header.header
-  .header_warrap
-    .left
-      .left_top
-        = link_to '/' do
-          = icon 'fa', 'home', class: "home"
-    .center
-      %ul.center_ul
-        %li.center_ul_li
-          =link_to 'Profile', profile_index_path ,class: "link"
-        %li.center_ul_li
-          = link_to 'Blog', blog_index_path ,class: "link"
-        %li.center_ul_li
-          = link_to 'MyWorks', '/',class: "link"
-        %li.center_ul_li
-          = link_to 'Contact', '/',class: "link"
-    .right
-      .right_icon
-        = link_to 'https://twitter.com/HbFOFW7rtnIfyY6' do
-          = icon 'fab', 'twitter',class: "twitter"
+.header_warrap
+  .left
+    .left_top
+      = link_to '/' do
+        = icon 'fa', 'home', class: "home"
+  .center
+    %ul.center_ul
+      %li.center_ul_li
+        =link_to 'Profile', profile_index_path ,class: "link"
+      %li.center_ul_li
+        = link_to 'Blog', blog_index_path ,class: "link"
+      %li.center_ul_li
+        = link_to 'MyWorks', '/',class: "link"
+      %li.center_ul_li
+        = link_to 'Contact', '/',class: "link"
+  .right
+    .right_icon
+      = link_to 'https://twitter.com/HbFOFW7rtnIfyY6' do
+        = icon 'fab', 'twitter',class: "twitter"
