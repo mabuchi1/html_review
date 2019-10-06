@@ -5,8 +5,14 @@
     .blog_warraper_box_left
       Blog
     .blog_warraper_box_right
-      = link_to '投稿ページ', new_blog_path, class: "link"
-      //後にadmin条件分岐
+      // admin only
+      -if (user_signed_in? && current_user.admin?)
+        = link_to '投稿ページ', new_blog_path, class: "link"
+      - if user_signed_in?
+        = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "link"
+      - else
+        = link_to 'ログイン', new_user_session_path, class: "link"
+        = link_to '新規登録', new_user_registration_path, class: "link"
   = render @blogs
 .footer
   = link_to '#top' do

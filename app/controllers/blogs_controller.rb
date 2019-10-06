@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   def top
-    @blogs = Blog.all
+    @blogs = Blog.with_attached_images.includes(:user)
     end
     
     def new
@@ -34,7 +34,7 @@ class BlogsController < ApplicationController
     
     private
     def blog_params
-    params.require(:blog).permit(:title, :text, images: [])
+    params.require(:blog).permit(:title, :text, images: []).marge(user_id: current_user.id)
     end
     
 end
