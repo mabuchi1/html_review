@@ -1,24 +1,44 @@
 = render 'shade/header'
 %main.profile_warraper
-  .profile_header
-    Profile
-  .profile_body
-    .profile_body_top
-      .profile_body_top_text
-        %p
-          経歴など紹介文
-    .profile_body_boxs
-      .box
-        .box_left
-          %figure.box_left_figure
-            = image_tag 'images/cafe2', size: '200x200'
-        .box_right
-          .box_right_texts
-            .box_right_texts_name
-              馬渕
-            .box_right_texts_learning
-              学習内容:
-                .box_right_texts_learning_one
-                  HTML / CSS / Ruby on Rails / mysql / kotlin / 
-            .box_right_texts_region
-            .box_right_texts_contact
+  .profile_contents
+    .profile_contents_mask
+      .profile
+        .profile_header
+          Profile
+        .profile_body
+          .profile_body_top
+            .profile_body_top_text
+              %p
+                2019年よりTECH::EXPERTにて学習を開始。
+                卒業ののち就職活動を行いながら学習を継続中。
+          .profile_body_boxs
+            .box
+              .box_left
+                %figure.box_left_figure
+                  = image_tag 'images/cafe2', size: '200x200'
+              .box_right
+                .box_right_texts
+                  .box_right_texts_add
+                    .box_right_texts_add_title
+                      git:
+                    .box_right_texts_add_name
+                      mabuchi1
+                  .box_right_texts_add
+                    .box_right_texts_add_learning
+                      学習内容:
+                    .box_right_texts_add_info
+                      HTML / CSS / Ruby on Rails / mysql / kotlin / 
+                  .box_right_texts_add
+                    .box_right_texts_add_region
+                      所在地:
+                    .box_right_texts_add_place
+                      近畿
+                  .box_right_texts_add
+                    初学者としてWebアプリケーション開発を学習中。
+                    %br
+                    kotlinに興味をもち独学で学習中。
+                  .box_right_texts_add
+                    .box_right_texts_add_twitter
+                      Twitter:
+                    .box_right_texts_add_id
+                      @HbFOFW7rtnIfyY6
