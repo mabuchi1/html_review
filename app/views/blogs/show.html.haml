@@ -14,8 +14,24 @@
             = @blog.text
 -if (user_signed_in? && current_user.admin? && current_user.id == @blog.user.id)
   %br
+  %br
   .my_edit
     = link_to "編集する",  edit_blog_path(@blog.id)
   %br
   .my_delete
     = link_to "削除する", "/blogs/#{@blog.id}", method: :delete
+  .comment_area
+    -if current_user
+      = form_with(model: [@blog, @comment], local: true) do |f|
+        = f.text_area :text, placeholder: "コメント", rows: "2"
+        = f.submit "送信"
+  .comments
+    .top
+      コメント一覧
+    - if @comments
+      - @comments.each do |comment|
+        .comments_deteil
+          .comments_deteil_nickname
+            = comment.user.nickname
+          .comments_deteil_text
+            = comment.text

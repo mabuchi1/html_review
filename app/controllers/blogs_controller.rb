@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   def top
-    @blogs = Blog.with_attached_images.includes(:user)
+    @blogs = Blog.with_attached_images.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     end
     
     def new
@@ -14,10 +14,12 @@ class BlogsController < ApplicationController
 
     def show
       @blog = Blog.find(params[:id])
+      @comment = Comment.new
+      @comments = @blog.comments.includes(:user)
     end
 
     def edit
-      if user_signed_in? && current_user.admin? && current_user.id == @blog.user.id
+      if current_user.admin?
         @blog = Blog.find(params[:id])
       else
         redirect_to blog_path
@@ -42,7 +44,7 @@ class BlogsController < ApplicationController
     
     private
     def blog_params
-    params.require(:blog).permit(:title, :text, images: []).marge(user_id: current_user.id)
+    params.require(:blog).permit(:title, :text, images: []).merge(user_id: current_user.id)
     end
     
 end

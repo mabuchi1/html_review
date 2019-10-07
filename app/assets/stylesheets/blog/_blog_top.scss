@@ -108,6 +108,34 @@
     }
   }
 }
+.comment_area{
+  text-align: center;
+  margin-bottom: 20px;
+  textarea{
+    width: 30%;
+    height: 30%;
+  }
+}
+.comments{
+  text-align: center;
+  padding-bottom: 20px;
+  border: #000 solid 0.7px;
+  .top{
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  &_deteil{
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    justify-content: left;
+    &_nickname{
+      padding: 0 50px 20px 0;
+      color: #113344;
+      
+    }
+  }
+}
 .footer{
   margin-top: 50px;
   text-align: center;
