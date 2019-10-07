@@ -17,7 +17,11 @@ class BlogsController < ApplicationController
     end
 
     def edit
-      @blog = Blog.find(params[:id])
+      if user_signed_in? && current_user.admin? && current_user.id == @blog.user.id
+        @blog = Blog.find(params[:id])
+      else
+        redirect_to blog_path
+      end
     end
 
     def update
@@ -27,9 +31,13 @@ class BlogsController < ApplicationController
     end
 
     def destroy
-      blog = Blog.find(params[:id])
-      blog.destroy
-      redirect_to blogs_path
+      if user_signed_in? && current_user.admin? && current_user.id == @blog.user.id
+        blog = Blog.find(params[:id])
+        blog.destroy
+        redirect_to blogs_path
+      else
+        redirect_to blogs_path
+      end
     end
     
     private

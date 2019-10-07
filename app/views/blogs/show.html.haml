@@ -12,7 +12,10 @@
         .blog_contents_box_bottom_text
           %span
             = @blog.text
-.my_edit
-  = link_to "編集する",  edit_blog_path(@blog.id)
-.my_delete
-  = link_to "削除する", "/blogs/#{@blog.id}", method: :delete
+-if (user_signed_in? && current_user.admin? && current_user.id == @blog.user.id)
+  %br
+  .my_edit
+    = link_to "編集する",  edit_blog_path(@blog.id)
+  %br
+  .my_delete
+    = link_to "削除する", "/blogs/#{@blog.id}", method: :delete

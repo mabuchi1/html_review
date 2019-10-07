@@ -1,0 +1,38 @@
+h2{
+  text-align: center;
+  padding: 80px 0;
+  font-size: 40px;
+}
+
+.field{
+  text-align: center;
+  margin: 20px 0;
+  #user_email{
+    width: 20%;
+    height: 30px;
+    font-size: 100%;
+  }
+  #user_password{
+    width: 20%;
+    height: 30px;
+    font-size: 100%;
+  }
+  #user_nickname{
+    width: 20%;
+    height: 30px;
+    font-size: 100%;
+  }
+  #user_password_confirmation{
+    width: 20%;
+    height: 30px;
+    font-size: 100%;
+  }
+}
+
+.user{
+  text-align: center;
+}
+.actions{
+  text-align: center;
+  margin: 30px 0;
+}
