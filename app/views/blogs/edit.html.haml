@@ -1,0 +1,12 @@
+.my_area
+  .form
+    = form_with(model: @blog, local: true) do |f|
+      .form_title
+        = f.text_field :title, placeholder: "title"
+      .form_text
+        = f.text_area :text, placeholder: "text"
+      .form_imgae
+        = f.label :images, for: 'up_images' do
+          = f.file_field :images,id: 'up_images', multiple: true, name: 'blog[images][]', placeholder: "image"
+      .form_submit
+        = f.submit '編集する'

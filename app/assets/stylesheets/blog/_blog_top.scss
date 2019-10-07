@@ -11,17 +11,32 @@
     }
   }
   .blog_contents{
+    border-bottom: #000 dashed;
     width: 80%;
     margin: 0 auto;
     p{
-      font-size: 24px;
-      color: #ffffff;
+      font-size: 28px;
+      color: #000000;
+      padding-left: 30px;
+      &:last-child{
+        font-size: 16px;
+        line-height: 28px;
+      }
     }
     &_box{
-      margin-bottom: 100px;
+      border: #000 solid 0.7px;
+      margin: 100px 0;
+      &_fix{
+        font-size: 30px;
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      }
       &_top{
         font-size: 30px;
         width: 50%;
+        margin: 0 auto;
         &_figure{
           margin-top: 30px;
           position: relative;
@@ -44,6 +59,10 @@
             opacity: 1;
             text-align: center;
             line-height: 300px;
+            p{
+              font-size: 24px;
+              color: #ffffff;
+            }
           }
         }
         &_figure:hover figcaption{
@@ -60,6 +79,7 @@
             padding-right: 10%;
           }
           span{
+            color: #000;
             width: 45%;
             position: relative;
             max-height: calc(16 * 1.8 * 3 * 1px);
