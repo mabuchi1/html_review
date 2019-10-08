@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     end
   end
   get "/blogs", to:  "blogs#top"
-  
+  post "/like/:blog_id" => "likes#like", as: 'like'
+  delete '/like/:blog_id' => 'likes#unlike', as: 'unlike'
 end
