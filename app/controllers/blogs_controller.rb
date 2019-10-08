@@ -41,6 +41,10 @@ class BlogsController < ApplicationController
         redirect_to blogs_path
       end
     end
+
+    def search
+      @blogs = Blog.search(params[:keyword]).order("created_at DESC").page(params[:page]).per(5)
+    end
     
     private
     def blog_params
