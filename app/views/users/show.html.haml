@@ -1,0 +1,26 @@
+.my_page
+  .my_page_top
+    .my_page_top
+      マイページ
+%main.blog_warraper
+  .blog_contents
+    -@blogs.each do |blog|
+      = link_to blog_path(blog.blog.id) do
+        .blog_contents_box
+          .blog_contents_box_fix
+            %p
+              = blog.blog.title
+            %p
+              = blog.created_at.strftime("%Y-%m-%d %H:%M")
+          .blog_contents_box_top
+            %figure.blog_contents_box_top_figure
+              = image_tag(blog.blog.images[0], size: "75%x75%", class: "img")
+              %figcaption.figcaption
+                %p
+                  = blog.blog.title
+          .blog_contents_box_bottom
+            .blog_contents_box_bottom_text
+              %span
+                = blog.blog.text
+          - if user_signed_in?
+            = render 'likes/like', blog: blog.blog

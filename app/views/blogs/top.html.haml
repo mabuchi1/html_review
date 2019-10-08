@@ -11,6 +11,7 @@
       -if (user_signed_in? && current_user.admin?)
         = link_to '投稿ページ', new_blog_path, class: "link"
       - if user_signed_in?
+        = link_to 'マイページ', "/users/#{current_user.id}", class: "link"
         = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "link"
       - else
         = link_to 'ログイン', new_user_session_path, class: "link"
