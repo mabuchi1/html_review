@@ -12,7 +12,8 @@
         .blog_contents_box_bottom_text
           %span
             = @blog.text
-      = render 'likes/like', blog: @blog
+      - if user_signed_in?
+        = render 'likes/like', blog: @blog
 -if (user_signed_in? && current_user.admin? && current_user.id == @blog.user.id)
   %br
   %br
