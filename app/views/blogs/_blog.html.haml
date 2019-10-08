@@ -16,3 +16,5 @@
         .blog_contents_box_bottom_text
           %span
             = blog.text
+      - if user_signed_in?
+        = render 'likes/like', blog: blog
