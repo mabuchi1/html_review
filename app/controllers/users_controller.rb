@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    if user_signed_in? 
+    if current_user.id == params[:id].to_i
       user = User.find_by(id: params[:id])
       @blogs = Like.where(user_id: user.id)
     else
