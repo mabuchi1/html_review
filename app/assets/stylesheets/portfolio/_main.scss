@@ -53,7 +53,7 @@
     }
   }
   &_second{
-    height: 100vh;
+    height: calc(100vh - 70px);
     background-color: #FFFFFF;
     background: url(images/books);
     background-size: cover;

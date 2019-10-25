@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "portfolio#index"
   resources :profile, only: [:index]
   resources :users, only: [:show]
+  resources :works, only: [:index, :show, :new, :create]
   resources :blogs, only: [:new, :create, :show, :edit, :update, :destroy] do
     resources :comments, only: :create
     collection do

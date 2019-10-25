@@ -1,0 +1,18 @@
+.contents_second#Profile
+  .contents_second_warrap
+    .box_warrap
+      .box
+        %p
+          Works
+      - @works.each do |work|
+        %ul.items
+          %li.items_app
+            = link_to work_path(work.id), class: "link" do
+              .items_app_header
+                %figure.items_app_header_figure
+                  = image_tag("images/point_app",size:'280x260')
+              .items_app_footer
+                = work.name
+      - if request.path_info == root_path
+        .work_more
+          = link_to 'more', works_path, class: "link"

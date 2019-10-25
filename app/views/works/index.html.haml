@@ -1,0 +1,5 @@
+= render 'shade/header'
+- if current_user.admin?
+  .work_add
+    = link_to 'アプリの追加', work_path(@work.id)
+= render 'shade/works', collection: :@works

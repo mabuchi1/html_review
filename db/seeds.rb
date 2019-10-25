@@ -6,8 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create!(nickname: "管理者",
-              email: "admin@test",
-              password: "12345678",
-              password_confirmation: "12345678",
-              admin: true)
+# User.create!(nickname: "管理者",
+#               email: "admin@test",
+#               password: "12345678",
+#               password_confirmation: "12345678",
+#               admin: true)
+
+Work.create!(name: "得点計算アプリケーション",
+            url: "https://intense-ravine-91761.herokuapp.com/")
